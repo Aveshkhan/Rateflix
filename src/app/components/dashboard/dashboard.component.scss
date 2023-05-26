@@ -1,0 +1,37 @@
+.heroContent::before {
+  content: '';
+  background: url(../../../assets/png/Avatar_Dashboard_Banner.png) center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  min-height: 600px;
+  width: 100%;
+  z-index: -1;
+  filter: contrast(1.08);
+  box-shadow: inset 0px -24px 80px -15px #000;
+}
+
+.heroContent {
+  color: #f4f4f4;
+  margin-top: 150px;
+  margin-left: 46px;
+  margin-bottom: 150px;
+}
+
+.heroContentMovieName {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 122px;
+}
+
+.bannerDiscription{
+  max-width: 50%;
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
+.headerTitle{
+  color: #f4f4f4;
+}

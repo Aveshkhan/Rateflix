@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body{
+  background-color: #000000;
+}
+
+.subheading1{
+  color: #f4f4f4;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.monsterrat{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.heroBtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff10;
+  backdrop-filter: blur(3.5px);
+  padding: 8px 40px;
+  border-radius: 55px;
+}
