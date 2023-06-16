@@ -35,3 +35,133 @@
 .headerTitle{
   color: #f4f4f4;
 }
+
+.headerTitle{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 43px;
+  color: #f4f4f4;
+  position: relative;
+}
+
+.headerTitle::before{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 3px;
+  width: 80px;
+  background-color: #E50914;
+  border-radius: 50px;
+}
+
+.cardsContent{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 0 1.5rem;
+  overflow-x: scroll;
+  box-shadow: inset 30px 0 20px -4px #000, inset -30px 0 20px -4px #000;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.cardsContent::-webkit-scrollbar {
+  display: none;
+}
+
+.customCard{
+  background-color: #121212;
+  color: #f4f4f4;
+  border-radius: 25px;
+  max-width: 270px;
+  min-width: 270px;
+  height: 500px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.cardDetails{
+  display: flex;
+  align-items: start;
+  margin: 20px 10px;
+  font-size: 18px;
+  height: 20%;
+}
+
+.cardDetails .cardName{
+  width: 80%;
+  font-size: 16px;
+}
+
+.cardDetails .cardRating{
+  width: 20%;
+}
+
+.cardDetails .cardRating .subheading1{
+  font-size: 16px !important;
+}
+
+.cardPoster{
+  position: relative;
+  height: 80%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b1b1b;
+}
+
+// .ranking::before{
+//   content: '';
+//   // background: url(../../../assets/svg/bookmark.svg) no-repeat ;
+
+// }
+
+.ranking{
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 40px;
+  // z-index: 1;
+  width: 40px;
+  -webkit-backdrop-filter: blur(3.5px);
+  backdrop-filter: blur(3.5px);
+  background-color: #12121283;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+
+}
+
+.cardsContainer{
+  position: relative;
+}
+
+.swipeLeft{
+  z-index: 100;
+  position: absolute;
+  left: -5px;
+  top: 40%;
+}
+
+.swipeLeft img, .swipeRight img{
+  height: 28px;
+}
+
+.swipeRight{
+  z-index: 100;
+  position: absolute;
+  right: -5px;
+  top: 40%;
+}
+
+.comingSoon .cardDetails .cardName{
+  width: 100%;
+}

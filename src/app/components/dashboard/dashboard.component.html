@@ -24,6 +24,90 @@
       </button>
     </div>
 
-      <h3 class="monsterrat headerTitle">Popular Movies</h3>
+    <h3 class="monsterrat headerTitle mt-2 mb-12">Popular Movies</h3>
+    <div class="cardsContainer">
+      <div class="swipeLeft" (click)="swipeLeft('mostPopularMovieContent')">
+        <img src="../../../assets/svg/arrow.svg" alt="">
+      </div>
+      <div #mostPopularMovieContent class="mostPopularMovies cardsContent mb-4">
+        <div class="customCard" *ngFor="let popularMovie of mostPopularMovies">
+          <div class="cardPoster">
+            <div class="ranking">
+              <p># {{popularMovie.rank}}</p>
+            </div>
+            <img [src]="popularMovie.image" alt="poster">
+          </div>
+          <div class="cardDetails">
+            <div class="cardName">{{popularMovie.fullTitle}}</div>
+            <div class="cardRating center gap-2">
+              <img src="../../../assets/svg/rating star.svg" alt="">
+              <p class="subheading1 monsterrat">{{popularMovie.imDbRating}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swipeRight" (click)="swipeRight('mostPopularMovieContent')">
+        <img src="../../../assets/svg/arrow right.svg" alt="">
+      </div>
+    </div>
+
+    <h3 class="monsterrat headerTitle mt-14 mb-12">Popular TV Shows</h3>
+    <div class="cardsContainer">
+      <div class="swipeLeft" (click)="swipeLeft('mostPopularTVsContent')">
+        <img src="../../../assets/svg/arrow.svg" alt="">
+      </div>
+      <div #mostPopularTVsContent class="mostPopularTVs cardsContent mb-4">
+        <div class="customCard" *ngFor="let popularTVs of mostPopularTVs">
+          <div class="cardPoster">
+            <div class="ranking">
+              <p># {{popularTVs.rank}}</p>
+            </div>
+            <img [src]="popularTVs.image" alt="poster">
+          </div>
+          <div class="cardDetails">
+            <div class="cardName">{{popularTVs.fullTitle}}</div>
+            <div class="cardRating center gap-2">
+              <img src="../../../assets/svg/rating star.svg" alt="">
+              <p class="subheading1 monsterrat">{{popularTVs.imDbRating}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swipeRight" (click)="swipeRight('mostPopularTVsContent')">
+        <img src="../../../assets/svg/arrow right.svg" alt="">
+      </div>
+    </div>
+
+
+    <h3 class="monsterrat headerTitle mt-14 mb-12">Coming Soon</h3>
+    <div class="cardsContainer">
+      <div class="swipeLeft" (click)="swipeLeft('comingSoonContent')">
+        <img src="../../../assets/svg/arrow.svg" alt="">
+      </div>
+      <div #comingSoonContent class="comingSoon cardsContent mb-4">
+        <div class="customCard" *ngFor="let upComing of comingSoon">
+          <div class="cardPoster">
+            <!-- <div class="ranking">
+              <p># {{upComing.rank}}</p>
+            </div> -->
+            <img [src]="upComing.image" alt="poster">
+          </div>
+          <div class="cardDetails">
+            <div class="cardName">{{upComing.fullTitle}}</div>
+            <!-- <div class="cardRating center gap-2">
+              <img src="../../../assets/svg/rating star.svg" alt="">
+              <p class="subheading1 monsterrat">{{upComing.imDbRating}}</p>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="swipeRight" (click)="swipeRight('comingSoonContent')">
+        <img src="../../../assets/svg/arrow right.svg" alt="">
+      </div>
+    </div>
+
+
   </div>
+  <div class="mid container mx-auto mt-8"></div>
+  <app-footer></app-footer>
 </div>
